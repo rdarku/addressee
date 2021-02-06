@@ -11,7 +11,8 @@ class Connection
                 $config['username'],
                 $config['password'],
                 [
-                    \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+                    \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+	                'reconnect'=>TRUE
                 ]
             );
         }
