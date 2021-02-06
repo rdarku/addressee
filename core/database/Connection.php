@@ -15,7 +15,7 @@ class Connection
                 ]
             );
         }
-        catch (Exception $e){
+        catch (\Exception $e){
             die(var_dump($e->getMessage()));
         }
     }
