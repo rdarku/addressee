@@ -13,3 +13,5 @@
 			Connection::make(App::get('config')[App::get('config')['database_environment']])
 		)
 	);
+	
+	dd(App::get('config'));
