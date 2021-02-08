@@ -23,7 +23,5 @@ function redirect($path)
 }
 
 function dd($message){
-    echo '<pre>';
     die(var_dump($message));
-    echo '</pre>';
 }

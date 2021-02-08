@@ -1,10 +1,13 @@
 <?php require('partials/head.php');?>
 <main class="container pt-3">
-    <h1>Addresses</h1>
+    <div class="d-flex justify-content-between mb-3">
+        <h1>Addresses</h1>
 
-    <div class="p-2">
-        <a href="/newAddress" class="btn btn-primary">Add An Address</a>
+        <div class="p-2">
+            <a href="/newAddress" class="btn btn-primary"> &plus; Add An Address</a>
+        </div>
     </div>
+    
     <?php if(count($addresses) > 0): ?>
     <table class="table">
         <thead>
@@ -16,10 +19,14 @@
         </tr>
         <?php foreach ($addresses as $address): ?>
             <tr>
-                <td><address><?=$address->address2 ?><br/><?=$address->address1 ?></address></td>
+                <td><?=$address->address2 ?> <br> <?=$address->address1 ?></td>
                 <td><?=$address->state ?></td>
                 <td><?=$address->city?></td>
-                <td>Details | Edit | Delete</td>
+                <td>
+                    <a href="#" class="btn btn-link">Details</a>
+                    <a href="#" class="btn btn-link">Edit</a>
+                    <a href="#" class="btn btn-link">Delete</a>
+                </td>
             </tr>
         <?php endforeach;?>
         </thead>

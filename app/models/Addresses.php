@@ -45,11 +45,11 @@ class Addresses
     /*
      * Function to get a record by the id
      * @param INT id
-     * @returns a single Address record
+     * @returns a single record
      */
     public function find(int $id)
     {
-        return $this->database->findOne('addresses','id',$id);
+        return $this->database->findOne($this->table,'id',$id);
     }
 
     public function findOne()

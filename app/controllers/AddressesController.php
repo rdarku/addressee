@@ -2,14 +2,15 @@
 
 namespace App\Controllers;
 
-use App\models\Addresses;
+use App\models\{Addresses,States};
 
 class AddressesController
 {
     public function index()
     {
         $addresses = (new Addresses())->getAll();
-        return view('addresses',['addresses'=>$addresses]);
+        
+        return view('addresses',compact('addresses'));
     }
 
     public function store()
@@ -35,6 +36,8 @@ class AddressesController
 
     public function add()
     {
-        return view('addressForm');
+	
+	    $states = (new States())->getAll();
+        return view('addressForm',compact('states'));
     }
 }

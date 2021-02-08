@@ -4,7 +4,10 @@ namespace App\Core;
 
 class Router
 {
-    protected array $routes = [];
+    protected array $routes = [
+	    'GET' => [],
+	    'POST' => []
+    ];
 
     public static function load($file)
     {
