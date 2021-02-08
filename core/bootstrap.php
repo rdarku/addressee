@@ -7,11 +7,9 @@
 	ini_set("display_errors", 1);
 	
 	App::bind('config', Config::load('config.ini')->getConfig());
-	dd(App::get('config'));
+	
 	App::bind('database',
 		new QueryBuilder(
 			Connection::make(App::get('config')[App::get('config')['database_environment']])
 		)
 	);
-	
-	
