@@ -17,6 +17,7 @@ class Connection
             );
         }
         catch (\Exception $e){
+        	dd($config);
             die(var_dump($e->getMessage()));
         }
     }
